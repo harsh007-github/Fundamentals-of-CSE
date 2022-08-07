@@ -1,6 +1,6 @@
 # Fundamentals-of-CSE
-This repo contains my learnings of Computer Science Concepts 
+This repo contains my learnings of Computer Science Concepts
 - Operators
 - Conditionals
--loops
--Array
+- Loops
+- Arrays
