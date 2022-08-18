@@ -4,3 +4,4 @@ This repo contains my learnings of Computer Science Concepts
 - Conditionals
 - Loops
 - Arrays
+- Functions
