@@ -135,3 +135,30 @@ int main()
 
 }
 
+
+		//To Print Twice of Array Elements
+
+
+int doubleOf(int A[],int size)
+{
+	int i;
+	for(i=0;i<size;i++)
+	{
+	A[i]=2*A[i];
+	}
+}
+
+int main()
+	{	
+	int A[]={1,2,3,4,5};
+	int c;
+	int size=sizeof (A)/sizeof (A[0]);
+	doubleOf(A,size);
+	for(c=0;c<size;c++){
+	printf("%d\n",A[c]);
+	}
+	
+	return 0;
+
+}
+
