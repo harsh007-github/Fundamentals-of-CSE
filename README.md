@@ -5,3 +5,4 @@ This repo contains my learnings of Computer Science Concepts
 - Loops
 - Arrays
 - Functions
+- Pointers
