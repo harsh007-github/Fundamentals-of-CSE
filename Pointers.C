@@ -122,6 +122,27 @@ int main()
 }
 
 
+
+	//Printing string using Pointers
+void print(char* C)
+{
+	int i=0;
+	while(C[i] !='\0')
+	{
+	printf("%c",C[i]);
+	i++;
+	}
+		
+}
+int main()
+{
+	char C[15]="HELLO THERE";
+	print(C);
+	return 0;
+}
+
+
+
 	
 
 
