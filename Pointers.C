@@ -71,22 +71,27 @@ int main()
 	//Output-16
 
 
-	//Pointer and Arrays
-
-	int a[3]={38,78,83};
+		//Pointer and Arrays
+{
+	int a[4]={38,78,83,0};
 	int b;
-	for(b=0;b<3;b++){
+	int d=0;
+	int* ptr=&a[b];
+	while(a[b] != 0)
+	{
 
-	printf("%d\n",a[b]);
-	printf("%d\n",&(a[b]));
-
+	printf("%d\n",*(ptr+d));
+	printf("%d\n",(ptr+d));
+	b++;
+	d++;
 	}
+	
 
 	return 0;
 
-	}
+}
 
-/*Output(Note:Variable adress can be different in your device):
+/*Output(Note:Variable address can be different in your device):
 	38
 	6487568
 	78
@@ -96,7 +101,7 @@ int main()
 
 
 
-	//To Print Twice of Array Elements
+		//To Print Twice of Array Elements
 
 	int doubleOf(int *A,int size)
 {
