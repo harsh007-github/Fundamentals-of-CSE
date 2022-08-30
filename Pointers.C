@@ -1,93 +1,96 @@
 #include<stdio.h>
+
 int main()
-	//Pointer Basics
+//Pointer Basics
+
+
 {
-	int a=5;				//variable declaration
-	int *p;			
-	p=&a;
-	printf("Address of A:%d\n",p);		
-	printf("Address of P:%d\n",&p);		
-	printf("Value Stored at A:%d",*p);		
-	return 0;
+        int a = 5; //variable declaration
+        int * p;
+        p = & a;
+        printf("Address of A:%d\n", p);
+        printf("Address of P:%d\n", & p);
+        printf("Value Stored at A:%d", * p);
+        return 0;
 
-	/*Output-	Address of A:6487580(Address will be different in your machine)
-		Address of P:6487568(Address will be different in your machine)
-		Value Stored at A:5*/
-
+        /*Output-	Address of A:6487580(Address will be different in your machine)
+        	Address of P:6487568(Address will be different in your machine)
+        	Value Stored at A:5*/
 
 }
-	//Pointer Arithmetic
+//Pointer Arithmetic
 
-	int a=10;
-	int *b;
-	b=&a;
-	printf("%d\n",b);
-	printf("%d",b+1);	//Incrementing 'b'
-	return 0;
+int a = 10;
+int * b;
+b = & a;
+printf("%d\n", b);
+printf("%d", b + 1); //Incrementing 'b'
+return 0;
 
-	/*Output- 	6487572(Address will be different in your machine)
-		6487576 (Address will be different in your machine)*/
+/*Output- 	6487572(Address will be different in your machine)
+	6487576 (Address will be different in your machine)*/
 
-
-	
-	//Pointer to pointer 
-	int a = 1025;	
-	int *p;
-	p=&a;
-	int **q;		//'q'-Pointer to pointer 'p'
-	q=&p;
-	printf("%d\n",**q);
-	printf("%d\n",&p);
-	int ***r;		//'r'-Pointer to pointer 'q'
-	r=&q;
-	printf("%d\n",***r);
-	printf("%d",&q);
-	return 0;
-
-	/*Output-  1025
-		6487560(Address will be different in your machine)
-		1025
-		6487552(Address will be different in your machine)*/
-		
+//Pointer to pointer 
 
 
+int a = 1025;
+int * p;
+p = & a;
+int ** q; //'q'-Pointer to pointer 'p'
+q = & p;
+printf("%d\n", ** q);
+printf("%d\n", & p);
+int ** * r; //'r'-Pointer to pointer 'q'
+r = & q;
+printf("%d\n", ** * r);
+printf("%d", & q);
+return 0;
 
-		//Pointer as Function Arguments
+/*Output-  1025
+	6487560(Address will be different in your machine)
+	1025
+	6487552(Address will be different in your machine)*/
+
+//Pointer as Function Arguments
+
+
 #include<stdio.h>
 
-	//Function "Inc"
-	int inc(int *ptr)
-{
-	*ptr = (*ptr)+1;	
+//Function "Inc"
+int inc(int * ptr) {
+        * ptr = ( * ptr) + 1;
 }
-int main()
+int main() {
+        int a = 15;
+        inc( & a); //Calling 'Inc' funciton
+        printf("%d", a);
+        return 0;
+}
+
+//Output-16
+
+//Pointer and Arrays
+
+
 {
-	int  a=15;
-	inc(&a); 	//Calling 'Inc' funciton
-	printf("%d",a);
-	return 0;
-	}
+        int a[4] = {
+                38,
+                78,
+                83,
+                0
+        };
+        int b;
+        int d = 0;
+        int * ptr = & a[b];
+        while (a[b] != 0) {
 
-	//Output-16
+                printf("%d\n", *(ptr + d));
+                printf("%d\n", (ptr + d));
+                b++;
+                d++;
+        }
 
-
-		//Pointer and Arrays
-{
-	int a[4]={38,78,83,0};
-	int b;
-	int d=0;
-	int* ptr=&a[b];
-	while(a[b] != 0)
-	{
-
-	printf("%d\n",*(ptr+d));
-	printf("%d\n",(ptr+d));
-	b++;
-	d++;
-	}
-	
-
-	return 0;
+        return 0;
 
 }
 
@@ -99,55 +102,110 @@ int main()
 	83
 	6487576		*/
 
+//To Print Twice of Array Elements
+
+int doubleOf(int * A, int size) {
+        int i;
+        for (i = 0; i < size; i++) {
+                A[i] = 2 * A[i];
+        }
+}
+
+int main() {
+        int A[] = {
+                1,
+                2,
+                3,
+                4,
+                5
+        };
+        int c;
+        int size = sizeof(A) / sizeof(A[0]);
+        doubleOf(A, size);
+        for (c = 0; c < size; c++) {
+                printf("%d\n", A[c]);
+        }
+
+        return 0;
+
+}
+
+//Printing string using Pointers
 
 
-		//To Print Twice of Array Elements
+void print(char * C) {
+        int i = 0;
+        while (C[i] != '\0') {
+                printf("%c", C[i]);
+                i++;
+        }
 
-	int doubleOf(int *A,int size)
-{
-	int i;
-	for(i=0;i<size;i++)
-	{
-	A[i]=2*A[i];
+}
+int main() {
+        char C[15] = "HELLO THERE";
+        print(C);
+        return 0;
+}
+
+//Dynamic memory Allocation using Malloc
+
+#include<stdio.h>
+
+#include<stdlib.h>
+
+int main() {
+        int * ptr;
+        int n;
+        int i;
+        printf("Enter The Number Of Elements:");
+        scanf("%d", & n);
+        printf("Entered Number Of Elements:%d\n", n);
+        ptr = (int * ) malloc(n * sizeof(int));
+        if (ptr == NULL) {
+                printf("Memory Not Allocated\n");
+                exit(0);
+        } else {
+                for (i = 0; i < n; ++i) {
+                        ptr[i] = i + 1;
+                }
+                printf("Elements are:\n");
+                for (i = 0; i < n; i++) {
+                        ptr[i] = i + 1;
+                        printf("%d", ptr[i]);
+                }
+
+        }
+
+        return 0;
+}
+
+
+
+
+//Dynamic memory Allocation using Calloc
+
+	#include<stdio.h>
+
+	#include<stdlib.h>
+
+	int main() {
+	        int * ptr;
+	        int n;
+	        int i;
+	        printf("Enter The Number Of Elements:");
+	        scanf("%d", & n);
+	        printf("Entered Number Of Elements:%d\n", n);
+	        ptr = (int * ) calloc(n, sizeof(int)); //Typecasting void to int
+	        for (i = 0; i < n; ++i) {
+	                ptr[i] = i + 1;
+	        }
+	        printf("Elements Of The Array are:");
+	        for (i = 0; i < n; i++) {
+	                ptr[i] = i + 1;
+	                printf("%d", ptr[i]);
+	        }
+
+	        return 0;
 	}
-}
-
-int main()
-	{	
-	int A[]={1,2,3,4,5};
-	int c;
-	int size=sizeof (A)/sizeof (A[0]);
-	doubleOf(A,size);
-	for(c=0;c<size;c++){
-	printf("%d\n",A[c]);
-	}
-	
-	return 0;
-
-}
-
-
-
-	//Printing string using Pointers
-void print(char* C)
-{
-	int i=0;
-	while(C[i] !='\0')
-	{
-	printf("%c",C[i]);
-	i++;
-	}
-		
-}
-int main()
-{
-	char C[15]="HELLO THERE";
-	print(C);
-	return 0;
-}
-
-
-
-	
 
 
