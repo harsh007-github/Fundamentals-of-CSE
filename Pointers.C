@@ -29,7 +29,7 @@ return 0;
 /*Output- 	6487572(Address will be different in your machine)
 	6487576 (Address will be different in your machine)*/
 
-//Pointer to pointer 
+//Pointer to pointer
 
 int a = 1025;
 int * p;
@@ -198,4 +198,30 @@ int main() {
         }
 
         return 0;
+}
+
+
+
+//Dynamic Memory Allocation using Realloc
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+       int n;
+       int i;
+       printf("Enter the Number of elements\n");
+       scanf("%d", &n);
+       int *A = (int*) malloc(n* sizeof(int));
+       int *B = (int*) realloc(A, 2 *n* sizeof(int));
+       for (i = 0; i < 4 * n; i++)
+       {
+              B[i] = i + 1;
+       }
+       for (i = 0; i < (2 *n); i++)
+       {
+              printf("%d\t", B[i]);
+       }
+       return 0;
 }
