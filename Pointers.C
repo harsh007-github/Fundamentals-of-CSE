@@ -3,7 +3,6 @@
 int main()
 //Pointer Basics
 
-
 {
         int a = 5; //variable declaration
         int * p;
@@ -32,7 +31,6 @@ return 0;
 
 //Pointer to pointer 
 
-
 int a = 1025;
 int * p;
 p = & a;
@@ -53,7 +51,6 @@ return 0;
 
 //Pointer as Function Arguments
 
-
 #include<stdio.h>
 
 //Function "Inc"
@@ -70,7 +67,6 @@ int main() {
 //Output-16
 
 //Pointer and Arrays
-
 
 {
         int a[4] = {
@@ -132,7 +128,6 @@ int main() {
 
 //Printing string using Pointers
 
-
 void print(char * C) {
         int i = 0;
         while (C[i] != '\0') {
@@ -179,33 +174,28 @@ int main() {
         return 0;
 }
 
-
-
-
 //Dynamic memory Allocation using Calloc
 
-	#include<stdio.h>
+#include<stdio.h>
 
-	#include<stdlib.h>
+#include<stdlib.h>
 
-	int main() {
-	        int * ptr;
-	        int n;
-	        int i;
-	        printf("Enter The Number Of Elements:");
-	        scanf("%d", & n);
-	        printf("Entered Number Of Elements:%d\n", n);
-	        ptr = (int * ) calloc(n, sizeof(int)); //Typecasting void to int
-	        for (i = 0; i < n; ++i) {
-	                ptr[i] = i + 1;
-	        }
-	        printf("Elements Of The Array are:");
-	        for (i = 0; i < n; i++) {
-	                ptr[i] = i + 1;
-	                printf("%d", ptr[i]);
-	        }
+int main() {
+        int * ptr;
+        int n;
+        int i;
+        printf("Enter The Number Of Elements:");
+        scanf("%d", & n);
+        printf("Entered Number Of Elements:%d\n", n);
+        ptr = (int * ) calloc(n, sizeof(int)); //Typecasting void to int
+        for (i = 0; i < n; ++i) {
+                ptr[i] = i + 1;
+        }
+        printf("Elements Of The Array are:");
+        for (i = 0; i < n; i++) {
+                ptr[i] = i + 1;
+                printf("%d", ptr[i]);
+        }
 
-	        return 0;
-	}
-
-
+        return 0;
+}
