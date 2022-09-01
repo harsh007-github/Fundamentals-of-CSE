@@ -225,3 +225,26 @@ int main()
        }
        return 0;
 }
+
+
+	
+
+//Pointers as Function Returns
+
+		#include<stdio.h>
+
+		#include<stdlib.h>
+
+		int * add(int * a, int * b) {
+		        int * r = (int * ) malloc(sizeof(int));
+		        * r = ( * a) + ( * b);
+		        return r;
+		}
+		int main() {
+		        int a = 8, b = 7;
+		        int * c = add( & a, & b);
+		        printf("%d", * c);
+		        return 0;
+		}
+
+
