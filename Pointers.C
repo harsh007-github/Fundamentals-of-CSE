@@ -248,3 +248,22 @@ int main()
 		}
 
 
+
+
+//Pointer to Functions
+
+	#include<stdio.h>
+
+	int add(int a, int b) {
+	        int c = a + b;
+	        return c;
+	}
+	int main() {
+	        int c;
+	        int( * p)(int, int);
+	        p = add;
+	        c = add(23, 35);
+	        printf("%d", c);
+
+	}
+
