@@ -267,3 +267,43 @@ int main()
 
 	}
 
+
+
+
+//Sorting elements using Bubblesort
+
+#include<stdio.h>
+
+void bubblesort(int * A, int n) {
+        int i, j, temp;
+        for (i = 0; i < n; i++) {
+                for (j = 0; j < n - 1; j++) {
+                        if (A[j] > A[j + 1]) {
+                                temp = A[j];
+                                A[j] = A[j + 1];
+                                A[j + 1] = temp;
+                        }
+                }
+        }
+}
+
+int main() {
+        int A[] = {
+                5,
+                4,
+                6,
+                7,
+                8,
+                9,
+                1,
+                3,
+                2
+        };
+        int i;
+        bubblesort(A, 9);
+        for (i = 0; i < 9; i++) {
+                printf("%d\t", A[i]);
+        }
+
+}
+
