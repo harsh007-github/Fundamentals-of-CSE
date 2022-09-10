@@ -6,3 +6,4 @@ This repo contains my learnings of Computer Science Concepts
 - Arrays
 - Functions
 - Pointers
+- String
