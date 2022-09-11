@@ -41,3 +41,22 @@ return 0;
         return 0;
 }
 //Note:-Uncomment gets or scanf to get the desired output
+
+
+//Printing Alphabets and digits using putchar()
+#include<stdio.h>
+
+int main() { 
+	
+        int ch;
+        for (ch = 'A'; ch <= 'Z'; ch++) {
+                printf("\n");
+                putchar(ch);
+        }
+
+        for (ch = '0'; ch <= '9'; ch++) {
+                printf("\t");
+                putchar(ch);
+        }
+        return 0;
+}
