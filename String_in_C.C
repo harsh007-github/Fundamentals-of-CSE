@@ -60,3 +60,41 @@ int main() {
         }
         return 0;
 }
+
+
+//Copying one string into another using strcpy
+
+//Note:-Make sure to include string.h library
+int main() {
+
+
+        char str[25] = "Hello there";
+        char str1[25];
+        printf("%s\n", strcpy(str1, str));
+        printf("%s", str1);
+        return 0;
+}
+
+//chaining a series of strcpy calls
+
+int main() {
+        char str1[25] = "chaining of Strcpy";
+        char str2[25];
+        char str3[25];
+        strcpy(str3, strcpy(str2, str1));
+        printf("%s\n%s\n%s", str1, str2, str3);
+        return 0;
+
+        //Note:-Do not forget to include string.h library
+}
+
+//copying a string using strncpr
+
+int main() {
+        char str[6] = "Hello";
+        char arr[5];
+        strncpy(arr, str, sizeof(arr));
+        printf("%s", arr);
+        arr[sizeof(arr) - 1] = '\0'; //Adding null terminator
+        return 0;
+}
