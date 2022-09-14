@@ -98,3 +98,47 @@ int main() {
         arr[sizeof(arr) - 1] = '\0'; //Adding null terminator
         return 0;
 }
+
+//Printing the length of string using strlen
+
+#include<stdio.h>
+#include<string.h>
+
+int main() {
+        char str[100] = "This is a String";
+        printf("%d", strlen(str));
+        return 0;
+}
+	/*Note:-Even though the size of the character array is 100		(100*1) but the iutput will be 16 as strlen() prints length 		of the string and not the array.*/
+
+//Appending two strings using strcat()
+
+#include<stdio.h>
+
+#include<string.h>
+
+int main() {
+        char str[25], arr[25];
+        strcpy(str, "This text will be ");
+        strcpy(arr, "combined with this.");
+        strcat(str, arr); //strcat will concatenate str & arr
+        printf("%s", str);
+        return 0;
+}
+
+//Concatenating two strings using strncat()
+
+#include<stdio.h>
+
+#include<string.h>
+ 
+int main() {
+        char str[5], arr[15];
+        strcpy(str, "Hel");
+        strcpy(arr, "lo");
+        strncat(str, arr, sizeof(str) - strlen(str) - 1);
+        printf("%s", str);
+        return 0;
+
+}
+
