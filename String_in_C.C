@@ -142,3 +142,18 @@ int main() {
 
 }
 
+
+
+ //Use of strcmp() to compare strings and find the shorter one 
+int main() {
+        char str0[] = "Hars";
+        char str1[] = "Harsh";
+        if (strcmp(str0, str1) < 0) {
+                printf("str0 is less");
+        } else {
+                printf("Str1 is less than or equal to Str0");
+        }
+        return 0;
+}
+/*Note:-Even though the elements of both the strings are same if statement will be executed since number of elements is str0<str1
+Make sur to include string.h library*/
