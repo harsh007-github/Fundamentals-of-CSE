@@ -43,3 +43,30 @@ int main()
 	}
 	return 0;
 }
+/*Note-Since the file is in append mode so if you run the same code twice the data will be concatenated after  each other*/
+
+//fputs()
+
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+int main()
+{
+
+	FILE *fp;
+	char enter[100];
+	fp=fopen("Harsh.txt","w");
+	if(fp==NULL)
+	{
+	printf("File not opened Successfully");
+	}
+	else
+	{
+	printf("Enter the string:");
+	gets(enter);
+	fputs(enter,fp);
+	printf("Data entered successfully");
+	fclose(fp);	
+	}
+	return 0;
+}
