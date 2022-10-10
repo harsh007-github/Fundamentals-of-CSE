@@ -70,3 +70,28 @@ int main()
 	}
 	return 0;
 }
+
+//fprintf()
+
+#include<stdio.h>
+int main()
+{
+	FILE *fp;
+	char name[30];
+	int age;
+	char gender[10];
+	fp=fopen("Harsh.txt","w");
+	if(fp==NULL)
+	{
+	printf("File failed to open");
+	}
+	else
+	{
+	printf("Enter your name,age and gender:");
+	scanf(("%s%d%s"),name,&age,gender);
+	fprintf(fp,"%s %d %s",name,age,gender);
+	printf("Data written successfully");
+	fclose(fp);
+	}
+	return 0;
+}
