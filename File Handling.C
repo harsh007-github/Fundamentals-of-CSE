@@ -107,3 +107,30 @@ int main() {
 
         return 0;
 }
+
+
+//Reading inputs using fscanf()
+
+#include<stdio.h>
+int main()
+{
+	FILE *fp;
+	char name[15];
+	int age;
+	char gender[10];
+	fp=fopen("Harsh.txt","r");
+	if(fp==NULL)
+	{
+	printf("File not opened successfully");
+	}
+	else
+	{
+	  fscanf(fp,"%s%d%s",name,&age,gender);
+	  printf("%s %d %s",name,age,gender);
+	  fclose(fp);
+	}
+
+
+
+	return 0;
+}
