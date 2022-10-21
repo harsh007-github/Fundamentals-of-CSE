@@ -160,3 +160,17 @@ int main() {
         }
 
 }
+
+//Renaming files using rename()
+
+#include<stdio.h>
+
+int main() {
+        if (rename("Harsh.txt", "Harshnew.txt") == 0) {
+                printf("File renamed successfully");
+        } else {
+                printf("Unable to rename file");
+        }
+        return 0;
+}
+/*Note:-Rename returns 0 if file is renamed successfully else it returns non zero value and if file does't exists else part will execute*/
