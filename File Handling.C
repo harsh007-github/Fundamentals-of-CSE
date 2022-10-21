@@ -134,3 +134,29 @@ int main()
 
 	return 0;
 }
+
+
+//Reading input usnig fgets()
+
+#include<stdio.h>
+
+#include<conio.h>
+
+#include<string.h>
+
+int main() {
+        FILE * fp;
+        fp = fopen("Harsh.txt", "r");
+        char data[100];
+        int i;
+        if (fp == NULL) {
+                printf("File not opened");
+        } else {
+                while (!feof(fp)) {
+                        fgets(data, 100, fp);
+                        printf("The characters readed were:%s", data);
+                }
+                printf("\nData readed Succesfully");
+        }
+
+}
