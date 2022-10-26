@@ -174,3 +174,23 @@ int main() {
         return 0;
 }
 /*Note:-Rename returns 0 if file is renamed successfully else it returns non zero value and if file does't exists else part will execute*/
+
+
+//Deleting a file using remove()
+
+#include<stdio.h>
+int main()
+{
+	int status;
+	status=remove("a.exe");	//remove() returns 0 if file is deleted else it returns non zero value
+	if(status==0)
+	{
+		printf("File Deleted Successfully");
+	}
+	else
+	{
+		printf("Unable to delete file");
+	}
+	
+}
+
