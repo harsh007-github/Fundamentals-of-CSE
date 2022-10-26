@@ -211,3 +211,35 @@ int main()
 	}
 }
 
+//ferror() & clearerr() added
+#include<stdio.h>
+int main()
+{
+	char arr[25]="Hello there visitor";
+	int status;
+	FILE* fp;
+	fp=fopen("Harsh.txt","r");
+	if(fp==NULL)
+	{
+		printf("Unable to open File");
+	}
+	else
+	{
+		printf("File opened successfully\n");
+		fprintf(fp,"%s",arr);
+		status=ferror(fp);
+		printf("%d\n",status);
+		clearerr(fp);
+		status=ferror(fp);
+		printf("%d\n",status);
+		if(status==0)
+		{
+			printf("No read or write error produced");
+		}
+		else
+		{
+			printf("Read or write error has ocurred");
+		}
+	}
+}
+
