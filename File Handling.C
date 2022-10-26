@@ -194,3 +194,20 @@ int main()
 	
 }
 
+//Deleting a file which is present in some folder using remove()
+
+#include<stdio.h>
+int main()
+{
+	int status;
+	status=remove("Hello/Harsh.txt");
+	if(status==0)
+	{
+		printf("File deleted successfully");
+	}
+	else
+	{
+		printf("Unable to delete file");
+	}
+}
+
