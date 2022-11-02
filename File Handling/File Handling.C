@@ -243,3 +243,23 @@ int main()
 	}
 }
 
+// Working of rewind(File Pointer)
+#include<stdio.h>
+
+int main() {
+        FILE * fp;
+        fp = fopen("Harsh.txt", "r");
+        while (!feof(fp)) {
+                putchar(fgetc(fp));
+        }
+
+        printf("\n");
+        rewind(fp);
+        while (!feof(fp)) {
+                putchar(fgetc(fp));
+        }
+
+        return 0;
+        
+}
+
