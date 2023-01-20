@@ -50,3 +50,64 @@ var discount  = ((costPrice - sellPrice) / costPrice) * 100; //Formula to calcul
 console.log("Discount percentage is " + discount + "%");    //Displays discount %
 discount = Math.round(discount);    //Calling round function to remove unwanted digits
 console.log("Discount percentage is " + discount + "%"); //Prints 50%
+
+//Program to show conditionals in JS to show if student is pass or fail
+
+var marks = 30;
+if(marks < 33)
+{
+    console.log("Student is Fail");
+}
+else
+{
+    console.log("Student is Pass");
+}
+
+//JS program to display custom message based on the temperature using conditionals
+var temp = 25;
+if(temp < 20)
+{
+    console.log("It is freezing cold outside"); //If temp is less than 20
+}
+else if(temp < 30)
+{
+    console.log("It's moderately cold/hot outside");  //If temp is less than 30
+}
+else
+{
+    console.log("It's damn hot outside");
+}
+
+//JS program to check whether user is logged in successfully or not
+
+var email , google , facebook;
+email       = true;
+facebook    = true;
+google      = false;
+if(email == true)
+{
+    console.log("Login through email success");
+}
+else if(google == true)
+{
+    console.log("Login through google success");
+}
+else
+{
+    console.log("Login through Facebook success");
+}
+
+//Program to show user signout or signin button based on authentication
+
+var authenticated = true;
+//Using if else
+if(authenticated)
+{
+    console.log("Sign Out");
+}
+else
+{
+    console.log("Sign In");
+}
+//Using Ternary Operator
+(authenticated) ? console.log("Sign Out") : console.log("Sign In");
