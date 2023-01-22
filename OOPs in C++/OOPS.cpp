@@ -30,7 +30,7 @@ int main()
 	return 0;
 }
 
-//Program to illustrate use of static variables 
+//Program to illustrate use of static variables
 
 #include <iostream>
 using namespace std;
@@ -62,4 +62,3 @@ int main()
   r.setMarks(num);
   r.printPercent();
 }
-
