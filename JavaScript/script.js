@@ -111,3 +111,30 @@ else
 }
 //Using Ternary Operator
 (authenticated) ? console.log("Sign Out") : console.log("Sign In");
+
+
+/* Testing Switch case statemnts in JS to create the following roles:
+    admin gets full access
+    subadmin - gets access to create/delete courses
+    testprep - gets access to create/delete tests
+    user-gets access to consume content */
+
+var identity = "user";
+switch (identity) {
+    case "admin":
+        console.log("You get full access");
+        break;
+    case "user":
+        console.log("You can Consume Content");
+        break;
+    case "subadmin":
+        console.log("You get access to create/delete courses");
+        break;
+    case "testprep":
+        console.log("You get access to  create/delete tests");
+        break;
+
+    default:
+        console.log("Denied Access");
+        break;
+}
