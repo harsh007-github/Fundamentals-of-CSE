@@ -62,3 +62,36 @@ int main()
   r.setMarks(num);
   r.printPercent();
 }
+
+//Program for Parameterised constructor
+
+#include <iostream>
+using namespace std;
+
+class constructor
+{
+  private:
+    int num1 , num2;
+  public:
+    constructor(int a , int b)
+    {
+        num1 = a , num2 = b;
+    }
+    void printNum();
+};
+
+void constructor :: printNum()
+{
+    cout << "1st Number is " << num1 << endl;
+    cout << "2nd Number is " << num2 << endl;
+}
+
+int main()
+{
+    int firstNum , secondNum;
+    cout << " Enter 1st and 2nd Number:";
+    cin  >> firstNum >> secondNum;
+    constructor c(firstNum , secondNum);
+    c.printNum();
+    return 0;
+}
