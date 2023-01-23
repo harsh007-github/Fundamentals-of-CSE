@@ -138,3 +138,18 @@ switch (identity) {
         console.log("Denied Access");
         break;
 }
+
+
+//JS program to add two numbers using function
+
+var num1 = 78;
+var num2 = 61;
+
+//Creating function addNumbers to add the two numbers
+function addNumbers(num1 , num2)
+{
+    return (num1 + num2);
+}
+
+//Printing the sum of the numbers
+console.log(`Sum of ${num1} and ${num2} is ` + addNumbers(num1,num2));
