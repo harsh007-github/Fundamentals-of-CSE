@@ -187,3 +187,25 @@ function getUserRole(name , role)
 }
 
 console.log(getUserRole(name , role));
+
+
+//Understanding Contexts in JS
+
+var age = 65;
+
+displayAge(age);
+
+function displayAge(a)
+{
+    console.log(a);
+}
+
+printAge(age);
+
+var printAge = function (a)
+{
+    console.log(a);
+}
+
+
+// Explanation: In the above the first function will produce the output whereas the second function will produce error.This is because Global context scans functions and makes it available whereas it scans variable and make them undefined.
