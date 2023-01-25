@@ -63,6 +63,25 @@ int main()
   r.printPercent();
 }
 
+//Basic Program to illustrate Default Constructor
+#include<iostream>
+using namespace std;
+class example
+{
+	public:
+		example()
+		{
+			cout << "This is a default constructor!!";
+		}
+
+};
+int main()
+{
+	example e;
+	return 0;
+}
+
+
 //Program for Parameterised constructor
 
 #include <iostream>
