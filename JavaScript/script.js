@@ -207,5 +207,14 @@ var printAge = function (a)
     console.log(a);
 }
 
-
 // Explanation: In the above the first function will produce the output whereas the second function will produce error.This is because Global context scans functions and makes it available whereas it scans variable and make them undefined.
+
+
+//Introduction To Arrays in JS
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log(numbers); // Printing the whole array
+
+console.log(numbers[5]); // Prints the element at index 5
+
+//Note:- Unlike C/C++ in JS an array can be accessed as a whole without a loop
