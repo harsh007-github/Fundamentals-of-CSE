@@ -114,3 +114,30 @@ int main()
     c.printNum();
     return 0;
 }
+
+//Basic Program to illustrate copy constructor
+#include<iostream>
+using namespace std;
+class example
+{
+	private:
+		int num1 , num2;
+	public:
+		example(int a , int b)
+		{
+			num1 = a;
+			num2 = b;
+		}
+		example(example &d)
+		{
+			num1 = d.num1;
+			num2 = d.num2;
+			cout << num1 << " " << num2;
+		}
+};
+int main()
+{
+	example e(15 , 16);
+	example c(e);
+	return 0;
+}
