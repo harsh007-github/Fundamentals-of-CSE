@@ -141,3 +141,28 @@ int main()
 	example c(e);
 	return 0;
 }
+
+
+//Program to illustrate Destructors
+#include<iostream>
+using namespace std;
+class myClass
+{
+	private:
+    	int *myArray;
+	public:
+    	myClass(int size)
+		{
+        	myArray = new int[size];
+    	}
+    	~myClass()
+		{
+        delete[] myArray;
+        cout << "Resources allocated earlier is now free";
+    	}
+};
+int main()
+{
+	myClass m(15);
+	return 0;
+}
