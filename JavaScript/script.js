@@ -234,3 +234,12 @@ var arr = [15, 16, 26, 89, 123, 456];
 var example = arr.filter((num) => num < 100);
 
 console.log(example); // Prints all the number which satisfy the above condition
+
+
+//Slice()
+
+var users = ["Hey", "there", "how is it?", "I", "am", "harsh"];
+
+console.log(users.slice(0, 3));
+
+//Explaination:- Slice accepts 2 arguments, start point and end point. It then slices the array from the starting point and ending point.
