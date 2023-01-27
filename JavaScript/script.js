@@ -218,3 +218,19 @@ console.log(numbers); // Printing the whole array
 console.log(numbers[5]); // Prints the element at index 5
 
 //Note:- Unlike C/C++ in JS an array can be accessed as a whole without a loop
+
+
+//Performing some operations on array
+//fill()
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(arr.fill(5 , 0 , 6));
+
+//Explanation:- fill() function fills the array with the element which is passed as argument. It accepts 3 arguments, element to be filled , start point , end point. The start point is inclusive and end point is exclusive.
+
+//filter()
+
+var arr = [15, 16, 26, 89, 123, 456];
+
+var example = arr.filter((num) => num < 100);
+
+console.log(example); // Prints all the number which satisfy the above condition
