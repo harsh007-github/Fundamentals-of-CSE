@@ -237,7 +237,6 @@ console.log(example); // Prints all the number which satisfy the above condition
 
 
 //Slice()
-
 var users = ["Hey", "there", "how is it?", "I", "am", "harsh"];
 
 console.log(users.slice(0, 3));
