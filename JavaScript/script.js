@@ -242,3 +242,37 @@ var users = ["Hey", "there", "how is it?", "I", "am", "harsh"];
 console.log(users.slice(0, 3));
 
 //Explaination:- Slice accepts 2 arguments, start point and end point. It then slices the array from the starting point and ending point.
+
+
+//Objects in JavaScript
+var phoneData = {
+  adminName: "Harsh",
+  adminPass: "98756",
+  IMEInumber: "46549465465",
+  modelNumber: "iphone 14 ultra pro max",
+  screenTime: "10Hr 46Min",
+};
+console.log(phoneData.modelNumber);     // Prints th value holded by modelNumber
+
+console.table(phoneData);               // Prints content of the object as a table
+
+//Explanation:- Here in the above code an object named phoneData is created with some keys and their values.
+
+//Methods in JS
+var userData = {
+  firstName: "Harsh",
+  userId: "khand123 ",
+  enrollment: [],
+  buyCourse: function (courseName) {
+    return this.enrollment.push(courseName);
+  },
+  printCourseCount: function () {
+    return `${this.firstName} is enrolled in ${this.enrollment.length}`;
+  },
+};
+
+console.log(userData.printCourseCount());
+
+userData.buyCourse("Buy React JS");
+
+console.log(userData.printCourseCount());
