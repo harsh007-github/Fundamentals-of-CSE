@@ -276,3 +276,51 @@ console.log(userData.printCourseCount());
 userData.buyCourse("Buy React JS");
 
 console.log(userData.printCourseCount());
+
+//Illustrating For loops in JavaScript using an array
+const myArray = [
+  "Hey",
+  "There",
+  "This",
+  "is",
+  "an",
+  "array",
+];
+
+for(let i = 0; i < myArray.length; i++){
+    console.log(myArray[i]);
+}
+
+//while loop
+
+const myArray = [
+  "Hey",
+  "There",
+  "This",
+  "is",
+  "an",
+  "array"
+];
+
+let i = 0;
+while (i < myArray.length) {
+  console.log(myArray[i]);
+  i++;
+}
+
+//do-while loop
+
+const myArray = [
+  "Hey",
+  "There",
+  "This",
+  "is",
+  "an",
+  "array"
+];
+
+let i = 0;
+do {
+  console.log(myArray[i]);
+  i++;
+}while (i < myArray.length)
