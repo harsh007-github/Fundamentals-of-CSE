@@ -254,3 +254,45 @@ int main()
 
     return 0;
 }
+
+//Program to overload increment operator(Both pre and post)
+#include<iostream>
+using namespace std;
+class integer
+{
+	private:
+		int num;
+	public:
+		void getData(int a)
+		{
+			num = a;
+		}
+		void showData()
+		{
+			cout << "Num = " << num << endl;
+		}
+		integer operator ++()
+		{
+			integer temp;
+			temp.num = num + 1;
+			return temp;
+		}
+		integer operator ++(int)
+		{
+			integer temp;
+			temp.num = num++;
+			return temp;
+		}
+
+};
+int main()
+{
+	integer i , i1;
+	i.getData(15);
+	i.showData();
+	i1 = ++i;
+	i1.showData();
+	i1 = i++;
+	i1.showData();
+	return 0;
+}
