@@ -324,3 +324,28 @@ do {
   console.log(myArray[i]);
   i++;
 }while (i < myArray.length)
+
+// For each loop
+
+var names = [
+  "Harsh",
+  "Rahul",
+  "Akshit",
+  "Krishna",
+];
+
+names.forEach(s =>console.log(s));
+
+// For of loop
+
+var names = [
+  "Harsh",
+  "Rahul",
+  "Akshit",
+  "Krishna",
+];
+
+for(const n of names)
+{
+  console.log(n);
+}
