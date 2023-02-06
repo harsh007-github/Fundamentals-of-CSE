@@ -349,3 +349,20 @@ for(const n of names)
 {
   console.log(n);
 }
+
+//setInterval & setTimeout
+var count = document.querySelector(".counter");
+
+var follow = document.querySelector(".followers");
+
+let i = 1;
+setInterval(() => {
+  if(i <= 1000000)
+  {
+    count.innerText = i;
+    i++;
+  }
+}, 1);
+setTimeout(() => {
+  console.log("Subscribers on YouTube");
+}, 15000);

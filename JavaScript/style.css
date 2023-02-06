@@ -1,0 +1,18 @@
+body{
+    background-color: gray;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 44vh;
+    margin-top: 15%;
+
+}
+img{
+    height: 150px;
+    width: 150px;
+}
+h1 , h2{
+    text-align: center;
+   color: white;
+}
