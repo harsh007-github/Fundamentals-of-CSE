@@ -87,3 +87,46 @@ int main()
 	v.printVolume();
 	return 0;
 }
+
+// Program to illustrate Multiple Inheritance
+#include<iostream>
+using namespace std;
+class length
+{
+	protected:
+		float len;
+	public:
+		void setLength(float l)
+		{
+			len = l;
+		}
+};
+
+class breadth : public length
+{
+	protected:
+		float brdth;
+	public:
+		void setBreadth(float b)
+		{
+			brdth = b;
+		}
+};
+
+class area : public breadth
+{
+	public:
+	void printArea()
+	{
+		cout << " Area is " << len * brdth;
+	}
+};
+
+int main()
+{
+	area a;
+	a.setLength(23);
+	a.setBreadth(15);
+	a.printArea();
+	return 0;
+}
