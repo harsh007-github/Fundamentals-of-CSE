@@ -45,3 +45,32 @@ int main()
 	example2 e(15, 20);
 	return 0;
 }
+
+//Program to illustrate destrutor
+#include<iostream>
+using namespace std;
+class A
+{
+    public:
+    ~A()
+    {
+        cout << "A's Destructor";
+    }
+};
+class B : public A
+{
+    public:
+    B()
+    {}
+    ~B()
+    {
+        cout << "B's destrutor" << endl;
+    }
+
+
+};
+int main()
+{
+    B b;
+    return 0;
+}
