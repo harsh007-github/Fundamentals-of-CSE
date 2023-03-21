@@ -374,3 +374,17 @@ setTimeout(() => {
     console.log("This is a self executing function");
     }
 )();
+
+//Closures in Java Script
+function outerFunction() {
+  var outerVariable = "Hello, ";
+
+  function innerFunction() {
+    return outerVariable;
+  }
+
+  return innerFunction;
+}
+
+var innerFunc = outerFunction();
+console.log(innerFunc);
