@@ -366,3 +366,11 @@ setInterval(() => {
 setTimeout(() => {
   console.log("Subscribers on YouTube");
 }, 15000);
+
+//Self executing functions in JS
+(
+    function print()
+    {
+    console.log("This is a self executing function");
+    }
+)();
