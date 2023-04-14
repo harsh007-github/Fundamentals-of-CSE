@@ -33,3 +33,23 @@ int main()
 
 	fin.close();
 }
+
+//Program to read from the file
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main()
+{
+    ifstream fin;
+    //Opens the file
+    fin.open("touch.txt");
+    char ch;
+    //Runs until end of file isn't reached and prints all the content of file
+    while (!fin.eof())
+    {
+        cout << ch;
+        fin >> ch;
+    }
+    //Closes the file
+    fin.close();
+}
