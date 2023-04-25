@@ -388,3 +388,18 @@ function outerFunction() {
 
 var innerFunc = outerFunction();
 console.log(innerFunc);
+
+//Destructuring data in JS
+function myFunc({firstName, courseCount, role})
+{
+    console.log(`Name is ${firstName}`);
+    console.log(`course count is ${courseCount}`);
+    console.log(`Role is ${role}`);
+}
+
+const myObj = {
+    firstName:"Harsh",
+    courseCount:4,
+    role:"admin",
+};
+myFunc(myObj);
